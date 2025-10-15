@@ -9,13 +9,15 @@
     <script>
         let tally = 0.0;
         let x = 0;
-
-        while(x <= 10 ){
-            document.writeln(`<h2>The value of x is ${x} <h2>`);
-            x+=3;
-        }
-        document.writeln(`<h2>Now he value of x is ${x} outside of the while loop <h2>`);
-    
+        let rn;
+        while(x < 10){
+         rn = Math.floor(Math.random() * 3) + 1;
+            tally = tally + rn;
+            document.writeln(`<h2>${rn}<h2>`);
+            x = x + 1;
+         }
+        avg = tally / x;
+        document.write(`<h2>The average of the ${x} random numbers between 1 and 3 is ${avg}<h2>`);
     </script>
 </body>
 </html>
